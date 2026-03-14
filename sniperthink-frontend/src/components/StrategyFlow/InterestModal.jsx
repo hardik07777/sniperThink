@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import api from "../../services/api"
+import axios from "axios"
 
 export default function InterestModal({ step, close }) {
 
@@ -21,7 +22,7 @@ export default function InterestModal({ step, close }) {
 
     try {
 
-      await api.post("/interest", {
+      await axios.post("/api/interest", {
         name,
         email,
         step: step.title
