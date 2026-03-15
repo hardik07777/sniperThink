@@ -22,7 +22,7 @@ export default function InterestModal({ step, close }) {
 
     try {
 
-      await axios.post("/api/interest", {
+      await axios.post("/interest", {
         name,
         email,
         step: step.title
